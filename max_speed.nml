@@ -1,0 +1,612 @@
+grf {
+	grfid: "FM\01\01";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESC);
+	version: 80;
+	min_compatible_version: 68;
+
+	param 0 {
+		uni2_penalty {
+			type: int;
+			name: string(STR_PARAM_UNI2);
+			desc: string(STR_PARAM_DESC);
+			min_value: 0;
+			max_value: 50;
+			def_value: 5;
+		}
+	}
+	param 1 {
+		uni3_penalty {
+			type: int;
+			name: string(STR_PARAM_UNI3);
+			desc: string(STR_PARAM_DESC);
+			min_value: 0;
+			max_value: 50;
+			def_value: 10;
+		}
+	}
+	param 2 {
+		uni4_penalty {
+			type: int;
+			name: string(STR_PARAM_UNI4);
+			desc: string(STR_PARAM_DESC);
+			min_value: 0;
+			max_value: 50;
+			def_value: 15;
+		}
+	}
+	param 3 {
+		uni5_penalty {
+			type: int;
+			name: string(STR_PARAM_UNI5);
+			desc: string(STR_PARAM_DESC);
+			min_value: 0;
+			max_value: 50;
+			def_value: 20;
+		}
+	}
+}
+
+railtypetable {
+	UNI1, UNI2, UNI3, UNI4, UNI5
+}
+
+//   0 Kirby Paul Tank (Steam)
+switch(FEAT_TRAINS, SELF, train0_speed, current_railtype){
+UNI1: 64;
+UNI2: 64 - uni2_penalty;
+UNI3: 64 - uni3_penalty;
+UNI4: 64 - uni4_penalty;
+UNI5: 64 - uni5_penalty;
+64;
+}
+
+item(FEAT_TRAINS, train0, 0) {
+	graphics {
+		speed: train0_speed;
+	}
+}
+
+//   1 MJS 250 (Diesel)
+switch(FEAT_TRAINS, SELF, train1_speed, current_railtype){
+UNI1: 80;
+UNI2: 80 - uni2_penalty;
+UNI3: 80 - uni3_penalty;
+UNI4: 80 - uni4_penalty;
+UNI5: 80 - uni5_penalty;
+80;
+}
+
+item(FEAT_TRAINS, train1, 1) {
+	graphics {
+		speed: train1_speed;
+	}
+}
+
+//   2 Ploddyphut Choo-Choo
+switch(FEAT_TRAINS, SELF, train2_speed, current_railtype){
+UNI1: 72;
+UNI2: 72 - uni2_penalty;
+UNI3: 72 - uni3_penalty;
+UNI4: 72 - uni4_penalty;
+UNI5: 72 - uni5_penalty;
+72;
+}
+
+item(FEAT_TRAINS, train2, 2) {
+	graphics {
+		speed: train2_speed;
+	}
+}
+
+//   3 Powernaut Choo-Choo
+switch(FEAT_TRAINS, SELF, train3_speed, current_railtype){
+UNI1: 96;
+UNI2: 96 - uni2_penalty;
+UNI3: 96 - uni3_penalty;
+UNI4: 96 - uni4_penalty;
+UNI5: 96 - uni5_penalty;
+96;
+}
+
+item(FEAT_TRAINS, train3, 3) {
+	graphics {
+		speed: train3_speed;
+	}
+}
+
+//   4 Mightymover Choo-Choo
+switch(FEAT_TRAINS, SELF, train4_speed, current_railtype){
+UNI1: 112;
+UNI2: 112 - uni2_penalty;
+UNI3: 112 - uni3_penalty;
+UNI4: 112 - uni4_penalty;
+UNI5: 112 - uni5_penalty;
+112;
+}
+
+item(FEAT_TRAINS, train4, 4) {
+	graphics {
+		speed: train4_speed;
+	}
+}
+
+//   5 Ploddyphut Diesel
+switch(FEAT_TRAINS, SELF, train5_speed, current_railtype){
+UNI1: 120;
+UNI2: 120 - uni2_penalty;
+UNI3: 120 - uni3_penalty;
+UNI4: 120 - uni4_penalty;
+UNI5: 120 - uni5_penalty;
+120;
+}
+
+item(FEAT_TRAINS, train5, 5) {
+	graphics {
+		speed: train5_speed;
+	}
+}
+
+//   6 Powernaut Diesel
+switch(FEAT_TRAINS, SELF, train6_speed, current_railtype){
+UNI1: 152;
+UNI2: 152 - uni2_penalty;
+UNI3: 152 - uni3_penalty;
+UNI4: 152 - uni4_penalty;
+UNI5: 152 - uni5_penalty;
+152;
+}
+
+item(FEAT_TRAINS, train6, 6) {
+	graphics {
+		speed: train6_speed;
+	}
+}
+
+//   7 Wills 2-8-0 (Steam)
+switch(FEAT_TRAINS, SELF, train7_speed, current_railtype){
+UNI1: 88;
+UNI2: 88 - uni2_penalty;
+UNI3: 88 - uni3_penalty;
+UNI4: 88 - uni4_penalty;
+UNI5: 88 - uni5_penalty;
+88;
+}
+
+item(FEAT_TRAINS, train7, 7) {
+	graphics {
+		speed: train7_speed;
+	}
+}
+
+//   8 Chaney 'Jubilee' (Steam)
+switch(FEAT_TRAINS, SELF, train8_speed, current_railtype){
+UNI1: 112;
+UNI2: 112 - uni2_penalty;
+UNI3: 112 - uni3_penalty;
+UNI4: 112 - uni4_penalty;
+UNI5: 112 - uni5_penalty;
+112;
+}
+
+item(FEAT_TRAINS, train8, 8) {
+	graphics {
+		speed: train8_speed;
+	}
+}
+
+//   9 Ginzu 'A4' (Steam)
+switch(FEAT_TRAINS, SELF, train9_speed, current_railtype){
+UNI1: 128;
+UNI2: 128 - uni2_penalty;
+UNI3: 128 - uni3_penalty;
+UNI4: 128 - uni4_penalty;
+UNI5: 128 - uni5_penalty;
+128;
+}
+
+item(FEAT_TRAINS, train9, 9) {
+	graphics {
+		speed: train9_speed;
+	}
+}
+
+//  10 SH '8P' (Steam)
+switch(FEAT_TRAINS, SELF, train10_speed, current_railtype){
+UNI1: 144;
+UNI2: 144 - uni2_penalty;
+UNI3: 144 - uni3_penalty;
+UNI4: 144 - uni4_penalty;
+UNI5: 144 - uni5_penalty;
+144;
+}
+
+item(FEAT_TRAINS, train10, 10) {
+	graphics {
+		speed: train10_speed;
+	}
+}
+
+//  11 Manley-Morel DMU (Diesel)
+switch(FEAT_TRAINS, SELF, train11_speed, current_railtype){
+UNI1: 112;
+UNI2: 112 - uni2_penalty;
+UNI3: 112 - uni3_penalty;
+UNI4: 112 - uni4_penalty;
+UNI5: 112 - uni5_penalty;
+112;
+}
+
+item(FEAT_TRAINS, train11, 11) {
+	graphics {
+		speed: train11_speed;
+	}
+}
+
+//  12 'Dash' (Diesel)
+switch(FEAT_TRAINS, SELF, train12_speed, current_railtype){
+UNI1: 120;
+UNI2: 120 - uni2_penalty;
+UNI3: 120 - uni3_penalty;
+UNI4: 120 - uni4_penalty;
+UNI5: 120 - uni5_penalty;
+120;
+}
+
+item(FEAT_TRAINS, train12, 12) {
+	graphics {
+		speed: train12_speed;
+	}
+}
+
+//  13 SH/Hendry '25' (Diesel)
+switch(FEAT_TRAINS, SELF, train13_speed, current_railtype){
+UNI1: 128;
+UNI2: 128 - uni2_penalty;
+UNI3: 128 - uni3_penalty;
+UNI4: 128 - uni4_penalty;
+UNI5: 128 - uni5_penalty;
+128;
+}
+
+item(FEAT_TRAINS, train13, 13) {
+	graphics {
+		speed: train13_speed;
+	}
+}
+
+//  14 UU '37' (Diesel)
+switch(FEAT_TRAINS, SELF, train14_speed, current_railtype){
+UNI1: 144;
+UNI2: 144 - uni2_penalty;
+UNI3: 144 - uni3_penalty;
+UNI4: 144 - uni4_penalty;
+UNI5: 144 - uni5_penalty;
+144;
+}
+
+item(FEAT_TRAINS, train14, 14) {
+	graphics {
+		speed: train14_speed;
+	}
+}
+
+//  15 Floss '47' (Diesel)
+switch(FEAT_TRAINS, SELF, train15_speed, current_railtype){
+UNI1: 160;
+UNI2: 160 - uni2_penalty;
+UNI3: 160 - uni3_penalty;
+UNI4: 160 - uni4_penalty;
+UNI5: 160 - uni5_penalty;
+160;
+}
+
+item(FEAT_TRAINS, train15, 15) {
+	graphics {
+		speed: train15_speed;
+	}
+}
+
+//  16 CS 4000 (Diesel)
+switch(FEAT_TRAINS, SELF, train16_speed, current_railtype){
+UNI1: 96;
+UNI2: 96 - uni2_penalty;
+UNI3: 96 - uni3_penalty;
+UNI4: 96 - uni4_penalty;
+UNI5: 96 - uni5_penalty;
+96;
+}
+
+item(FEAT_TRAINS, train16, 16) {
+	graphics {
+		speed: train16_speed;
+	}
+}
+
+//  17 CS 2400 (Diesel)
+switch(FEAT_TRAINS, SELF, train17_speed, current_railtype){
+UNI1: 112;
+UNI2: 112 - uni2_penalty;
+UNI3: 112 - uni3_penalty;
+UNI4: 112 - uni4_penalty;
+UNI5: 112 - uni5_penalty;
+112;
+}
+
+item(FEAT_TRAINS, train17, 17) {
+	graphics {
+		speed: train17_speed;
+	}
+}
+
+//  18 Centennial (Diesel)
+switch(FEAT_TRAINS, SELF, train18_speed, current_railtype){
+UNI1: 112;
+UNI2: 112 - uni2_penalty;
+UNI3: 112 - uni3_penalty;
+UNI4: 112 - uni4_penalty;
+UNI5: 112 - uni5_penalty;
+112;
+}
+
+item(FEAT_TRAINS, train18, 18) {
+	graphics {
+		speed: train18_speed;
+	}
+}
+
+//  19 Kelling 3100 (Diesel)
+switch(FEAT_TRAINS, SELF, train19_speed, current_railtype){
+UNI1: 104;
+UNI2: 104 - uni2_penalty;
+UNI3: 104 - uni3_penalty;
+UNI4: 104 - uni4_penalty;
+UNI5: 104 - uni5_penalty;
+104;
+}
+
+item(FEAT_TRAINS, train19, 19) {
+	graphics {
+		speed: train19_speed;
+	}
+}
+
+//  20 Turner Turbo (Diesel)
+switch(FEAT_TRAINS, SELF, train20_speed, current_railtype){
+UNI1: 160;
+UNI2: 160 - uni2_penalty;
+UNI3: 160 - uni3_penalty;
+UNI4: 160 - uni4_penalty;
+UNI5: 160 - uni5_penalty;
+160;
+}
+
+item(FEAT_TRAINS, train20, 20) {
+	graphics {
+		speed: train20_speed;
+	}
+}
+
+//  21 MJS 1000 (Diesel)
+switch(FEAT_TRAINS, SELF, train21_speed, current_railtype){
+UNI1: 104;
+UNI2: 104 - uni2_penalty;
+UNI3: 104 - uni3_penalty;
+UNI4: 104 - uni4_penalty;
+UNI5: 104 - uni5_penalty;
+104;
+}
+
+item(FEAT_TRAINS, train21, 21) {
+	graphics {
+		speed: train21_speed;
+	}
+}
+
+//  22 SH '125' (Diesel)
+switch(FEAT_TRAINS, SELF, train22_speed, current_railtype){
+UNI1: 200;
+UNI2: 200 - uni2_penalty;
+UNI3: 200 - uni3_penalty;
+UNI4: 200 - uni4_penalty;
+UNI5: 200 - uni5_penalty;
+200;
+}
+
+item(FEAT_TRAINS, train22, 22) {
+	graphics {
+		speed: train22_speed;
+	}
+}
+
+//  23 SH '30' (Electric)
+switch(FEAT_TRAINS, SELF, train23_speed, current_railtype){
+UNI1: 160;
+UNI2: 160 - uni2_penalty;
+UNI3: 160 - uni3_penalty;
+UNI4: 160 - uni4_penalty;
+UNI5: 160 - uni5_penalty;
+160;
+}
+
+item(FEAT_TRAINS, train23, 23) {
+	graphics {
+		speed: train23_speed;
+	}
+}
+
+//  24 SH '40' (Electric)
+switch(FEAT_TRAINS, SELF, train24_speed, current_railtype){
+UNI1: 176;
+UNI2: 176 - uni2_penalty;
+UNI3: 176 - uni3_penalty;
+UNI4: 176 - uni4_penalty;
+UNI5: 176 - uni5_penalty;
+176;
+}
+
+item(FEAT_TRAINS, train24, 24) {
+	graphics {
+		speed: train24_speed;
+	}
+}
+
+//  25 'T.I.M.' (Electric)
+switch(FEAT_TRAINS, SELF, train25_speed, current_railtype){
+UNI1: 240;
+UNI2: 240 - uni2_penalty;
+UNI3: 240 - uni3_penalty;
+UNI4: 240 - uni4_penalty;
+UNI5: 240 - uni5_penalty;
+240;
+}
+
+item(FEAT_TRAINS, train25, 25) {
+	graphics {
+		speed: train25_speed;
+	}
+}
+
+//  26 'AsiaStar' (Electric)
+switch(FEAT_TRAINS, SELF, train26_speed, current_railtype){
+UNI1: 264;
+UNI2: 264 - uni2_penalty;
+UNI3: 264 - uni3_penalty;
+UNI4: 264 - uni4_penalty;
+UNI5: 264 - uni5_penalty;
+264;
+}
+
+item(FEAT_TRAINS, train26, 26) {
+	graphics {
+		speed: train26_speed;
+	}
+}
+
+//  54 'X2001' (Electric)
+switch(FEAT_TRAINS, SELF, train54_speed, current_railtype){
+UNI1: 304;
+UNI2: 304 - uni2_penalty;
+UNI3: 304 - uni3_penalty;
+UNI4: 304 - uni4_penalty;
+UNI5: 304 - uni5_penalty;
+304;
+}
+
+item(FEAT_TRAINS, train54, 54) {
+	graphics {
+		speed: train54_speed;
+	}
+}
+
+//  55 'Millennium Z1' (Electric)
+switch(FEAT_TRAINS, SELF, train55_speed, current_railtype){
+UNI1: 336;
+UNI2: 336 - uni2_penalty;
+UNI3: 336 - uni3_penalty;
+UNI4: 336 - uni4_penalty;
+UNI5: 336 - uni5_penalty;
+336;
+}
+
+item(FEAT_TRAINS, train55, 55) {
+	graphics {
+		speed: train55_speed;
+	}
+}
+
+//  56 Wizzowow Z99
+switch(FEAT_TRAINS, SELF, train56_speed, current_railtype){
+UNI1: 320;
+UNI2: 320 - uni2_penalty;
+UNI3: 320 - uni3_penalty;
+UNI4: 320 - uni4_penalty;
+UNI5: 320 - uni5_penalty;
+320;
+}
+
+item(FEAT_TRAINS, train56, 56) {
+	graphics {
+		speed: train56_speed;
+	}
+}
+
+//  84 Lev1 'Leviathan' (Electric)
+switch(FEAT_TRAINS, SELF, train84_speed, current_railtype){
+UNI1: 400;
+UNI2: 400 - uni2_penalty;
+UNI3: 400 - uni3_penalty;
+UNI4: 400 - uni4_penalty;
+UNI5: 400 - uni5_penalty;
+400;
+}
+
+item(FEAT_TRAINS, train84, 84) {
+	graphics {
+		speed: train84_speed;
+	}
+}
+
+//  85 Lev2 'Cyclops' (Electric)
+switch(FEAT_TRAINS, SELF, train85_speed, current_railtype){
+UNI1: 448;
+UNI2: 448 - uni2_penalty;
+UNI3: 448 - uni3_penalty;
+UNI4: 448 - uni4_penalty;
+UNI5: 448 - uni5_penalty;
+448;
+}
+
+item(FEAT_TRAINS, train85, 85) {
+	graphics {
+		speed: train85_speed;
+	}
+}
+
+//  86 Lev3 'Pegasus' (Electric)
+switch(FEAT_TRAINS, SELF, train86_speed, current_railtype){
+UNI1: 480;
+UNI2: 480 - uni2_penalty;
+UNI3: 480 - uni3_penalty;
+UNI4: 480 - uni4_penalty;
+UNI5: 480 - uni5_penalty;
+480;
+}
+
+item(FEAT_TRAINS, train86, 86) {
+	graphics {
+		speed: train86_speed;
+	}
+}
+
+//  87 Lev4 'Chimaera' (Electric)
+switch(FEAT_TRAINS, SELF, train87_speed, current_railtype){
+UNI1: 640;
+UNI2: 640 - uni2_penalty;
+UNI3: 640 - uni3_penalty;
+UNI4: 640 - uni4_penalty;
+UNI5: 640 - uni5_penalty;
+640;
+}
+
+item(FEAT_TRAINS, train87, 87) {
+	graphics {
+		speed: train87_speed;
+	}
+}
+
+//  88 Wizzowow Rocketeer
+switch(FEAT_TRAINS, SELF, train88_speed, current_railtype){
+UNI1: 480;
+UNI2: 480 - uni2_penalty;
+UNI3: 480 - uni3_penalty;
+UNI4: 480 - uni4_penalty;
+UNI5: 480 - uni5_penalty;
+480;
+}
+
+item(FEAT_TRAINS, train88, 88) {
+	graphics {
+		speed: train88_speed;
+	}
+}

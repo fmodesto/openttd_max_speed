@@ -1,0 +1,11 @@
+﻿##grflangid 0x01
+# English lng file
+
+STR_GRF_NAME		:Max speed for PURR Tracks (original trains)
+STR_GRF_DESC		:Modifies the maximum speed for the original trains depending on the color of the PURR tracks they are in.{}This allows conditional orders based on the current track (maximum speed).{}{}Requires PURR Universal Rainbow Rails NewGRF.
+
+STR_PARAM_UNI2		: {PUSH_COLOUR}{GOLD}YELLOW{POP_COLOUR} PURR speed reduction (Kmh)
+STR_PARAM_UNI3		: {PUSH_COLOUR}{RED}RED{POP_COLOUR} PURR speed reduction (Kmh)
+STR_PARAM_UNI4		: {PUSH_COLOUR}{BLUE}BLUE{POP_COLOUR} PURR speed reduction (Kmh)
+STR_PARAM_UNI5		: {PUSH_COLOUR}{GREEN}GREEN{POP_COLOUR} PURR speed reduction (Kmh)
+STR_PARAM_DESC      : Amount of speed to subtract from the max engine speed
