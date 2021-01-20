@@ -1,5 +1,5 @@
 grf {
-	grfid: "FM\01\03";
+	grfid: "FM\01\02";
 	name: string(STR_GRF_NAME);
 	desc: string(STR_GRF_DESC);
 	version: 80;
